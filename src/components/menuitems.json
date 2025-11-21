@@ -1,0 +1,47 @@
+{
+    "menuitems":
+    [
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:translate-x-104 hover:translate-y-32"
+        },
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:translate-y-32"      
+        },
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:-translate-x-104 hover:translate-y-32"
+        },
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:translate-x-104 hover:-translate-y-32"
+        },
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:-translate-y-32"
+        },
+        {
+            "name": "Pizza",
+            "ingredients": "cos",
+            "time": 10,
+            "allergens": ["cos", "cos innego"],
+            "animation": "hover:-translate-x-104 hover:-translate-y-32"
+        }
+    ]
+}

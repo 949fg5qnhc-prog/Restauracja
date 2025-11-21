@@ -14,16 +14,16 @@ const isActiveLink = (routePath) => {
                 <div class="flex flex-1 items-right justify-right md:items-stretch md:justify-start">
                     <div class="md:mx-auto">
                         <div class="flex space-x-16">
-                            <RouterLink to="/" :class="[isActiveLink('/') ? 'bg-gray-900 ring-2 ring-orange-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-orange-600']">
+                            <RouterLink to="/" :class="[isActiveLink('/') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
                                 Strona Główna
                             </RouterLink>
-                            <RouterLink to="/menu" :class="[isActiveLink('/menu') ? 'bg-gray-900 ring-2 ring-orange-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-orange-600']">
+                            <RouterLink to="/menu" :class="[isActiveLink('/menu') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
                                 Menu
                             </RouterLink>
-                            <RouterLink to="/about" :class="[isActiveLink('/about') ? 'bg-gray-900 ring-2 ring-orange-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-orange-600']">
+                            <RouterLink to="/about" :class="[isActiveLink('/about') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
                                 Informacje
                             </RouterLink>
-                            <RouterLink to="/pictures" :class="[isActiveLink('/pictures') ? 'bg-gray-900 ring-2 ring-orange-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-orange-600']">
+                            <RouterLink to="/pictures" :class="[isActiveLink('/pictures') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
                                 Galeria
                             </RouterLink>
                             
