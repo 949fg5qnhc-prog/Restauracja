@@ -6,42 +6,42 @@
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:translate-x-104 hover:translate-y-32"
+            "animation": "translate-x-104 translate-y-32 scale-200 z-50"
         },
         {
             "name": "Pizza",
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:translate-y-32"      
+            "animation": "translate-y-32 scale-200 z-50"      
         },
         {
             "name": "Pizza",
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:-translate-x-104 hover:translate-y-32"
+            "animation": "-translate-x-104 translate-y-32 scale-200 z-50"
         },
         {
             "name": "Pizza",
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:translate-x-104 hover:-translate-y-32"
+            "animation": "translate-x-104 -translate-y-32 scale-200 z-50"
         },
         {
             "name": "Pizza",
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:-translate-y-32"
+            "animation": "-translate-y-32 scale-200 z-50"
         },
         {
             "name": "Pizza",
             "ingredients": "cos",
             "time": 10,
             "allergens": ["cos", "cos innego"],
-            "animation": "hover:-translate-x-104 hover:-translate-y-32"
+            "animation": "-translate-x-104 -translate-y-32 scale-200 z-50"
         }
     ]
 }
