@@ -30,7 +30,7 @@ const router = createRouter({
       component: PicsView
     },
     {
-      path: '/reserve',
+      path: '/book',
       name: 'book',
       component: ReserveView
     }

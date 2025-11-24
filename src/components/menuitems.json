@@ -43,5 +43,16 @@
             "allergens": ["cos", "cos innego"],
             "animation": "-translate-x-104 -translate-y-32 scale-200 z-50"
         }
+    ],
+    "dates": [
+        {
+                "id": 1,
+                "fullSlots": false,
+                "remainingSlots": 4,
+                "possibleHours": ["16:30", "18:00", "19:30", "21:00"],
+                "month": "",
+                "year": ""
+
+        }
     ]
 }
