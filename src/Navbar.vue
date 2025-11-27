@@ -23,10 +23,9 @@ const isActiveLink = (routePath) => {
                             <RouterLink to="/about" :class="[isActiveLink('/about') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
                                 Informacje
                             </RouterLink>
-                            <RouterLink to="/pictures" :class="[isActiveLink('/pictures') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
-                                Galeria
+                            <RouterLink to="/book" :class="[isActiveLink('/book') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
+                                Zarezerwuj
                             </RouterLink>
-                            
                         </div>
                     </div>
                 </div>
