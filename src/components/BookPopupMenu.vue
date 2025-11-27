@@ -1,34 +1,51 @@
 <script setup>
 import axios from 'axios';
-import {reactive, onMounted} from 'vue';
+import { ref } from 'vue';
 
-const emit = defineEmits(['close']);
-
-const state = reactive({
-    dates: []
+const props = defineProps({
+  day: {
+    type: Object,
+    required: true
+  }
 });
 
-const fetchDates = async() =>
-{
-    try{
-        const date = await axios.get('/api/dates');
-        state.dates = date.data;
-    } catch (error) {
-        console.error('Błąd wczytywania dat:', error);
+const emit = defineEmits(['close', 'booking-confirmed']);
+
+const selectedHourIndex = ref(null);
+
+const handleConfirm = async () => {
+    if (selectedHourIndex.value === null) {
+        alert('Proszę wybrać godzinę przed potwierdzeniem.');
+        return;
     }
-}
 
-onMounted(fetchDates);
+    const newRemainingSlots = [...props.day.remainingSlots];
+    newRemainingSlots[selectedHourIndex.value] = false;
 
-const handleConfirm = () => {
-    // Here you can add logic for the reservation itself
-    emit('close'); // Tell the parent component to close the popup
+    try {
+        await axios.patch(`http://localhost:5001/dates/${props.day.id}`, {
+            remainingSlots: newRemainingSlots
+        });
+
+        
+        emit('booking-confirmed');
+        emit('close'); 
+    } catch (error) {
+        console.error('Nie udało się zaktualizować rezerwacji:', error);
+        alert('Wystąpił błąd podczas rezerwacji. Spróbuj ponownie.');
+    }
 }
 </script>
 
 <template>
 <div class="bg-gray-600/20 backdrop-blur-3xl backdrop-opacity-40 w-60 h-[300px] rounded-xl border border-gray-900 flex flex-col justify-center items-center p-4">
-    <h2 class="text-white text-center mb-8">Czy potwierdzasz wykonanie rezerwacji na ten dzień?</h2>
+    <h2 class="text-white text-center mb-8">Rezerwacja na dzień: <br><strong>{{ day.day }} {{ day.month }}</strong></h2>
+    <select v-model="selectedHourIndex" class="py-3 bg-gray-900 text-white text-bold text-2xl mb-10 rounded-xl border border-gray-300">
+        <option :value="null" disabled>Wybierz godzinę</option>
+        <template v-for="(isAvailable, index) in day.remainingSlots">
+            <option v-if="isAvailable" :key="index" :value="index">{{ day.hours[index] }}</option>
+        </template>
+    </select>
     <div class="card">
         <button @click="handleConfirm">Potwierdź</button>
     </div>
@@ -62,6 +79,9 @@ const handleConfirm = () => {
     margin-left: auto;
     margin-right: auto;
 
+}
+.card button:hover{
+    cursor: pointer;
 }
 .card::before
 {

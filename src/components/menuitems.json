@@ -1,56 +1,1327 @@
 {
-    "menuitems":
-    [
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "translate-x-104 translate-y-32 scale-200 z-50"
-        },
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "translate-y-32 scale-200 z-50"      
-        },
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "-translate-x-104 translate-y-32 scale-200 z-50"
-        },
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "translate-x-104 -translate-y-32 scale-200 z-50"
-        },
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "-translate-y-32 scale-200 z-50"
-        },
-        {
-            "name": "Pizza",
-            "ingredients": "cos",
-            "time": 10,
-            "allergens": ["cos", "cos innego"],
-            "animation": "-translate-x-104 -translate-y-32 scale-200 z-50"
-        }
-    ],
-    "dates": [
-        {
-                "id": 1,
-                "fullSlots": false,
-                "month": "",
-                "year": ""
-
-        }
-    ]
+  "menuitems": [
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "translate-x-104 translate-y-32 scale-200 z-50",
+      "id": "7469"
+    },
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "translate-y-32 scale-200 z-50",
+      "id": "2c8a"
+    },
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "-translate-x-104 translate-y-32 scale-200 z-50",
+      "id": "8496"
+    },
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "translate-x-104 -translate-y-32 scale-200 z-50",
+      "id": "5ba9"
+    },
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "-translate-y-32 scale-200 z-50",
+      "id": "1de7"
+    },
+    {
+      "name": "Pizza",
+      "ingredients": "cos",
+      "time": 10,
+      "allergens": [
+        "cos",
+        "cos innego"
+      ],
+      "animation": "-translate-x-104 -translate-y-32 scale-200 z-50",
+      "id": "ce74"
+    }
+  ],
+  "dates": [
+    {
+      "id": "1",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 27,
+      "month": "November",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "2",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 28,
+      "month": "November",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "3",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 29,
+      "month": "November",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "4",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 30,
+      "month": "November",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "5",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 1,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "6",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 2,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "7",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 3,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "8",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 4,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "9",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 5,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "10",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 6,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "11",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 7,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "12",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 8,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "13",
+      "fullSlots": false,
+      "remainingSlots": [
+        false,
+        false,
+        false
+      ],
+      "day": 9,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "14",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 10,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "15",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 11,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "16",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 12,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "17",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 13,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "18",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 14,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "19",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 15,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "20",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 16,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "21",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 17,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "22",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 18,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "23",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 19,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "24",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 20,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "25",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 21,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "26",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 22,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "27",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 23,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "28",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 24,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "29",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 25,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "30",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 26,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "31",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 27,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "32",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 28,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "33",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 29,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "34",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 30,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "35",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 31,
+      "month": "December",
+      "year": 2025,
+      "hours": [
+        "16:00",
+        "17:30",
+        "19:00"
+      ]
+    },
+    {
+      "id": "36",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 1,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "37",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 2,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "38",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 3,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "39",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 4,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "40",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 5,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "41",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 6,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "42",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 7,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "43",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 8,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "44",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 9,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "45",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 10,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "46",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 11,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "47",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 12,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "48",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 13,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "49",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 14,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "50",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 15,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "51",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 16,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "52",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 17,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "53",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 18,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "54",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 19,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "55",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 20,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "56",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 21,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "57",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 22,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "58",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 23,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "59",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 24,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "60",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 25,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "61",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 26,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "62",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 27,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "63",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 28,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "64",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 29,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "65",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 30,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "66",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 31,
+      "month": "January",
+      "year": 2026
+    },
+    {
+      "id": "67",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 1,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "68",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 2,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "69",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 3,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "70",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 4,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "71",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 5,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "72",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 6,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "73",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 7,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "74",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 8,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "75",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 9,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "76",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 10,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "77",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 11,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "78",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 12,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "79",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 13,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "80",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 14,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "81",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 15,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "82",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 16,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "83",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 17,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "84",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 18,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "85",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 19,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "86",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 20,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "87",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 21,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "88",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 22,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "89",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 23,
+      "month": "February",
+      "year": 2026
+    },
+    {
+      "id": "90",
+      "fullSlots": false,
+      "remainingSlots": [
+        true,
+        true,
+        true
+      ],
+      "day": 24,
+      "month": "February",
+      "year": 2026
+    }
+  ]
 }
