@@ -17,7 +17,6 @@
     </div>
     <div class="grid grid-cols-6 gap-0 min-h-[40vh]"> 
         <div class="col-span-2 bg-black/60 p-8 text-white" style="clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);">
-            <!-- Cook 1 -->
              <div class="pr-12">
                 <img src="/public/chef.jpg" class="rounded-2xl ring-2 ring-white/30 max-w-[10vw] mx-auto mb-3"></img>
                 <p style="transform: skew(-15deg);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -25,14 +24,12 @@
              
         </div>
         <div class="col-span-2 bg-white/60 p-12 text-black" style="clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%);">
-            <!-- Cook 2 -->
              <div class="px-8">
                 <img src="/public/chef.jpg" class="rounded-2xl ring-2 ring-black/30 max-w-[10vw] mx-auto mb-3"></img>
                 <p style="transform: skew(-15deg);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
              </div>
         </div>
         <div class="col-span-2 bg-black/60 p-8 text-white" style="clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);">
-            <!-- Cook 3 -->
              <div class="pl-12">
                 <img src="/public/chef.jpg" class="rounded-2xl ring-2 ring-white/30 max-w-[10vw] mx-auto mb-3"></img>
                 <p class="-ml-2 mr-2" style="transform: skew(-15deg);">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
