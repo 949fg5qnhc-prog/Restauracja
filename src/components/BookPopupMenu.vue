@@ -1,6 +1,10 @@
 <script setup>
 import axios from 'axios';
 import { ref } from 'vue';
+import { useToast } from 'vue-toastification';
+
+const toast = useToast();
+
 
 const props = defineProps({
   day: {
@@ -27,12 +31,13 @@ const handleConfirm = async () => {
             remainingSlots: newRemainingSlots
         });
 
-        
+        toast.success('Rezerwacja została potwierdzona!');
         emit('booking-confirmed');
         emit('close'); 
     } catch (error) {
         console.error('Nie udało się zaktualizować rezerwacji:', error);
         alert('Wystąpił błąd podczas rezerwacji. Spróbuj ponownie.');
+        toast.error('Wystąpił błąd podczas rezerwacji. Spróbuj ponownie.');
     }
 }
 </script>
@@ -47,7 +52,10 @@ const handleConfirm = async () => {
         </template>
     </select>
     <div class="card">
-        <button @click="handleConfirm">Potwierdź</button>
+        <button @click="handleConfirm" class="hover:scale-[1.05]">Potwierdź</button>    
+    </div>
+    <div class="card2 mt-3">
+        <button @click="emit('close')" class=" hover:scale-[1.05]" style="cursor: pointer;">Anuluj</button>
     </div>
 </div>
 </template>
@@ -102,6 +110,63 @@ const handleConfirm = async () => {
 }
 
 .card::after
+{
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background-color: rgb(56, 56, 56);
+    border-radius: 10px;
+    
+}
+.card2
+{
+    width: 130px;
+    height: 60px;
+    background-color: rgb(56, 56, 56);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.card2 button{
+    color: white;
+    font-size: large;
+    font-family: inherit;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.card2 button:hover{
+    cursor: pointer;
+}
+.card2::before
+{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 140px;
+    background: linear-gradient(180deg, #ee0404, #ffffff);
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.card2::after
 {
     content: "";
     position: absolute;

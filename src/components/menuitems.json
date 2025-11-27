@@ -175,7 +175,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 3,

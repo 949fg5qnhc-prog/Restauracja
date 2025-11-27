@@ -69,7 +69,7 @@ onMounted(() => {
            @click="!isFullyBooked(day) && showMenu(day)"
            class="border rounded-lg p-4 text-center w-[75px]"
            :class="{
-             'bg-gray-300/65 backdrop-blur-lg backdrop-opacity-30 cursor-pointer': !isFullyBooked(day),
+             'bg-gray-300/65 backdrop-blur-lg backdrop-opacity-30 cursor-pointer hover:scale-[1.1]': !isFullyBooked(day),
              'bg-gray-500/50 cursor-not-allowed': isFullyBooked(day)
            }">
         <div class="font-bold text-xl">{{ day.day }}</div>
