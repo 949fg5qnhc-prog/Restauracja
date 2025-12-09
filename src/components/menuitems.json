@@ -107,7 +107,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 29,
@@ -514,7 +514,7 @@
       "id": "27",
       "fullSlots": false,
       "remainingSlots": [
-        true,
+        false,
         true,
         true
       ],
