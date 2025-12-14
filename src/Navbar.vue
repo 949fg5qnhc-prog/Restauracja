@@ -1,35 +1,118 @@
 <script setup>
-import {useRoute, useRouter, RouterLink} from 'vue-router'
+import { ref, watch, onUnmounted } from 'vue';
+import { useRoute, RouterLink } from 'vue-router'
 
 const isActiveLink = (routePath) => {
   const route = useRoute();
   return route.path === routePath;
 }
+const isActiveNav = ref(false);
+
+const closeMenu = () => {
+  isActiveNav.value = false;
+}
+
+watch(isActiveNav, (val) => {
+  if (val) {
+    setTimeout(() => window.addEventListener('click', closeMenu), 1);
+  } else {
+    window.removeEventListener('click', closeMenu);
+  }
+});
+
+onUnmounted(() => {
+  window.removeEventListener('click', closeMenu);
+});
 </script>
 
 <template>
-    <nav class="bg-gray-800 border-b border-gray-900 my-0 py-0">
-        <div class="mx-auto max-w-dvw px-2 sm:px-2 lg:px-4">
-            <div class="flex h-20 items-center justify-between">
-                <div class="flex flex-1 items-right justify-right md:items-stretch md:justify-start">
-                    <div class="md:mx-auto">
-                        <div class="flex space-x-16">
-                            <RouterLink to="/" :class="[isActiveLink('/') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
-                                Strona Główna
-                            </RouterLink>
-                            <RouterLink to="/menu" :class="[isActiveLink('/menu') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
-                                Menu
-                            </RouterLink>
-                            <RouterLink to="/about" :class="[isActiveLink('/about') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
-                                Informacje
-                            </RouterLink>
-                            <RouterLink to="/book" :class="[isActiveLink('/book') ? 'bg-gray-900 ring-2 ring-gray-600/45' : 'hover:bg-gray-900 hover:text-white', 'text-white', 'px-3', 'py-2', 'rounded-md', 'transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:translate-x-0.5 hover:bg-gray-600']">
-                                Zarezerwuj
-                            </RouterLink>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <i class="pi pi-align-justify hover:cursor-pointer" :class="[!isActiveNav ? 'text-4xl text-white absolute right-5 top-5 z-50' : 'not-shown']" @click="isActiveNav = !isActiveNav"></i>
+    
+    <Transition name="menu-anim">
+        <div v-if="isActiveNav" class="mobile-menu" @click.stop> <RouterLink to="/" class="nav-l" :class="[isActiveLink('/') ? 'text-white' : 'text-gray-400']" @click="closeMenu">
+                Strona Główna
+            </RouterLink>
+            <RouterLink to="/menu" class="nav-l" :class="[isActiveLink('/menu') ? 'text-white' : 'text-gray-400']" @click="closeMenu">
+                Menu
+            </RouterLink>
+            <RouterLink to="/about" class="nav-l" :class="[isActiveLink('/about') ? 'text-white' : 'text-gray-400']" @click="closeMenu">
+                Informacje
+            </RouterLink>
+            <RouterLink to="/book" class="nav-l" :class="[isActiveLink('/book') ? 'text-white' : 'text-gray-400']" @click="closeMenu">
+                Zarezerwuj
+            </RouterLink>
         </div>
-    </nav>
+    </Transition>
 </template>
+
+<style scoped>
+    .menu-anim-enter-active, .menu-anim-leave-active {
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+    }
+    .menu-anim-enter-from, .menu-anim-leave-to {
+        transform: translateX(100%); 
+        opacity: 0;
+    }
+    .menu-anim-enter-to, .menu-anim-leave-from {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1000;   
+        clip-path: polygon(30% 0, 100% 0%, 100% 100%, 100% 100%);
+        background-color: rgba(0, 0, 0, 0.95);
+        padding-top: 6rem; 
+        will-change: transform;
+    }
+
+    .not-shown {
+        display: none;
+    }
+    
+    
+    .nav-l {
+        position: relative;
+        display: block;      
+        width: 100%;        
+        text-align: right;   
+        padding: 1.5rem 4rem 1.5rem 0; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1;
+        transition: color 0.6s ease;
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
+    }
+
+    .nav-l::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+        background-color: #302543; 
+        transform: translateX(100%); 
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);    
+    }
+
+    .nav-l:hover::before {
+        transform: translateX(0);   
+    }
+    
+    .nav-l:hover {
+        color: white; 
+        padding-right: 5rem; 
+        transition: all 0.6s ease;
+    }
+</style>

@@ -19,17 +19,22 @@ async function fetchData() {
 
     const upcomingDates = response.data.filter(d => {
       const itemDate = new Date(d.year, getMonthIndex(d.month), d.day);
+      
       return itemDate >= today && itemDate < thirtyDaysFromNow;
+      
     });
 
     dates.value = upcomingDates.map(d => {
       const dateObj = new Date(d.year, getMonthIndex(d.month), d.day);
+      const idx = getMonthIndex(d.month);
+      if (idx === -1) console.warn(`Unknown month: ${d.month} for day ${d.day}`);
       const weekday = dateObj.toLocaleDateString("en-US", { weekday: "long" });
       return { ...d, weekday, shortWeekday: weekday.slice(0, 3) };
     });
   } catch (error) {
     console.error("Failed to fetch dates:", error);
   }
+  
 }
 
 const isFullyBooked = (day) => {
@@ -62,7 +67,8 @@ onMounted(() => {
 
 <template>
   <img src="/public/pexels-efrem-efre-2786187-16124818.jpg" class="blur-sm flex object-cover bg-no-repeat absolute" />
-  <div class="p-6 flex justify-center bg-gray-700/40 backdrop-opacity-10 backdrop-blur-2xl max-w-2xl mx-auto mt-12 rounded-3xl border-0">
+  <h1 :class="[isMenuVisible ? 'nn' : '']">Wybierz datę rezerwacji z kalendarza ponizej</h1>
+  <div class="cont p-6 flex justify-center bg-gray-700/40 backdrop-opacity-10 backdrop-blur-2xl max-w-2xl mx-auto mt-2 rounded-3xl border-0">
     <div class="dl grid grid-cols-7 gap-4 auto-rows-[100px] max-w-2xl rounded-3xl">
       <div v-for="day in dates"
            :key="day.id"
@@ -81,12 +87,18 @@ onMounted(() => {
     </div>
   </div>
   <div v-if="isMenuVisible" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center">
-    <BookPopupMenu :day="selectedDay" @close="hideMenu" @booking-confirmed="handleBookingConfirmed" />
+    <BookPopupMenu class = "z-1000" :day="selectedDay" @close="hideMenu" @booking-confirmed="handleBookingConfirmed" />
   </div>
 </template>
 
 
 <style scoped>
+  .nn
+  {
+    opacity: 0;
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
 .grid {
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 }
@@ -94,5 +106,42 @@ onMounted(() => {
 {
   padding: 0 2px;
   display: inline;
+}
+.cont {
+  animation: enter 1.2s ease;
+}
+
+@keyframes enter
+{
+  0% {opacity: 0;}
+  100% {opacity: 1 }
+}
+h1
+{
+  text-align:center;
+  color: white;
+  position: relative;
+  z-index: 500;
+  font-family: 'Brush Script MT';
+  font-size: 3rem;
+  opacity: 0;
+  animation: pixel-load 1.2s forwards;
+  pointer-events: none;
+}
+h1:hover
+{
+  cursor: default;
+}
+@keyframes pixel-load {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);      
+    filter: blur(8px);          
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);        
+    filter: blur(0px);          
+  }
 }
 </style>

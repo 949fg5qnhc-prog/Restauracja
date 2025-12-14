@@ -45,17 +45,17 @@ const handleConfirm = async () => {
 <template>
 <div class="bg-gray-600/20 backdrop-blur-3xl backdrop-opacity-40 w-60 h-[300px] rounded-xl border border-gray-900 flex flex-col justify-center items-center p-4">
     <h2 class="text-white text-center mb-8">Rezerwacja na dzień: <br><strong>{{ day.day }} {{ day.month }}</strong></h2>
-    <select v-model="selectedHourIndex" class="py-3 bg-gray-900 text-white text-bold text-2xl mb-10 rounded-xl border border-gray-300">
+    <select  v-model="selectedHourIndex" class="py-3 bg-gray-900 text-white text-bold text-2xl mb-10 rounded-xl border border-gray-300">
         <option :value="null" disabled>Wybierz godzinę</option>
         <template v-for="(isAvailable, index) in day.remainingSlots">
             <option v-if="isAvailable" :key="index" :value="index">{{ day.hours[index] }}</option>
         </template>
     </select>
     <div class="card">
-        <button @click="handleConfirm" class="hover:scale-[1.05]">Potwierdź</button>    
+        <button @click="handleConfirm">Potwierdź</button>    
     </div>
     <div class="card2 mt-3">
-        <button @click="emit('close')" class=" hover:scale-[1.05]" style="cursor: pointer;">Anuluj</button>
+        <button @click="emit('close')" style="cursor: pointer;">Anuluj</button>
     </div>
 </div>
 </template>
@@ -95,9 +95,9 @@ const handleConfirm = async () => {
 {
     content: "";
     position: absolute;
-    width: 250px;
+    width: 200px;
     height: 140px;
-    background: linear-gradient(180deg, #000000, #FFFFFF);
+    background: linear-gradient(180deg, #0ddd14, #848484);
     animation: rotate 5s linear infinite;
 }
 @keyframes rotate{
@@ -113,10 +113,14 @@ const handleConfirm = async () => {
 {
     content: "";
     position: absolute;
-    inset: 5px;
+    inset: 1px;
     background-color: rgb(56, 56, 56);
     border-radius: 10px;
     
+}
+.card:hover::after
+{
+    inset: 3px;
 }
 .card2
 {
@@ -154,7 +158,7 @@ const handleConfirm = async () => {
     position: absolute;
     width: 250px;
     height: 140px;
-    background: linear-gradient(180deg, #ee0404, #ffffff);
+    background: linear-gradient(180deg, #ee0404, #848484);
     animation: rotate 5s linear infinite;
 }
 @keyframes rotate{
@@ -170,9 +174,13 @@ const handleConfirm = async () => {
 {
     content: "";
     position: absolute;
-    inset: 5px;
+    inset: 1px;
     background-color: rgb(56, 56, 56);
     border-radius: 10px;
     
+}
+.card2:hover::after
+{
+    inset: 3px;
 }
 </style>

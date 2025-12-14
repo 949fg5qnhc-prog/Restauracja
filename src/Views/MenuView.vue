@@ -42,7 +42,7 @@ onMounted(fetchItems);
                 v-for="item in state.items" 
                 :key="item.id"
                 @click="toggleItemAnimation(item)"
-                class="col-span-1 bg-gray-500/20 backdrop-blur-lg rounded-2xl mx-4 mt-2 h-64 cursor-pointer z-30"
+                class="ent col-span-1 bg-gray-500/20 backdrop-blur-lg rounded-2xl mx-4 mt-2 h-64 cursor-pointer z-30"
                 :class="{ [item.animation]: item.isActive }"
                 :style="{ 
                     transition: item.isActive 
@@ -55,3 +55,21 @@ onMounted(fetchItems);
         </div>    
     </div>
 </template>
+
+<style scoped>
+.ent {
+	animation: tilt-in-fwd-tr 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes tilt-in-fwd-tr {
+  0% {
+    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+
+</style>
