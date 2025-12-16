@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <div class="cont w-96 h-140 bg-gray-100/30 backdrop-invert backdrop-opacity-10 inset-shadow-3xl inset-shadow-white z-40 absolute top-45 right-100 rounded-2xl animate-bounce-in flex justify-center items-center">
+    <div class="cont w-96 h-140 bg-gray-100/30 backdrop-invert backdrop-opacity-10 inset-shadow-3xl inset-shadow-white z-40 absolute top-45 left-0 right-0 mx-auto rounded-2xl animate-bounce-in flex justify-center items-center">
         <div class="link-container grid grid-flow-col grid-rows-4 gap-5">
             <RouterLink to="/menu" class="nh row-span-1 w-80 h-16 bg-gray-500/20 backdrop-invert-sm backdrop-opacity-5 
             inset-shadow-gray-900/40 z-50 items-center text-center mx-auto my-3 py-3 clas rounded-md text-3xl
@@ -31,10 +31,35 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style lang="css" scoped>
+
+@media (max-width: 768px)
+{
+    .cont{
+        width: 65vw;
+    }
+    .nh{
+        width: 60vw;
+    }
+}   
+@media (min-width: 768px)
+{
+    .cont{
+        width: 50vw;
+    }
+    .nh{
+        width: 40vw;
+    
+    }
+}
 .clas{
     font-family: 'Brush Script MT', cursive;
 
 }
+
+.nh{
+    border: 1px solid rgb(69, 69, 69);
+}
+
 
 
 .animate-bounce-in {

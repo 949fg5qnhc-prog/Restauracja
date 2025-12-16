@@ -66,14 +66,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <img src="/public/pexels-efrem-efre-2786187-16124818.jpg" class="blur-sm flex object-cover bg-no-repeat absolute" />
+  <img src="/public/pexels-efrem-efre-2786187-16124818.jpg" class="blur-sm fixed inset-0 w-full h-full object-cover -z-10" />
   <h1 :class="[isMenuVisible ? 'nn' : '']">Wybierz datę rezerwacji z kalendarza ponizej</h1>
-  <div class="cont p-6 flex justify-center bg-gray-700/40 backdrop-opacity-10 backdrop-blur-2xl max-w-2xl mx-auto mt-2 rounded-3xl border-0">
-    <div class="dl grid grid-cols-7 gap-4 auto-rows-[100px] max-w-2xl rounded-3xl">
+  <div class="cont p-6 flex justify-center bg-gray-700/40 backdrop-opacity-10 backdrop-blur-2xl w-full max-w-2xl mx-auto mt-2 rounded-3xl border-0">
+    <div class="dl grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 gap-4 auto-rows-[100px] w-full rounded-3xl">
       <div v-for="day in dates"
            :key="day.id"
            @click="!isFullyBooked(day) && showMenu(day)"
-           class="border rounded-lg p-4 text-center w-[75px]"
+           class="border rounded-lg p-4 text-center w-full day"
            :class="{
              'bg-gray-300/65 backdrop-blur-lg backdrop-opacity-30 cursor-pointer hover:scale-[1.1]': !isFullyBooked(day),
              'bg-gray-500/50 cursor-not-allowed': isFullyBooked(day)
@@ -111,6 +111,15 @@ onMounted(() => {
   animation: enter 1.2s ease;
 }
 
+@media (max-width: 768px) {
+  .cont{
+    width: 65vw;
+  }
+  h1{
+    margin-top: 3rem;
+  }
+}
+
 @keyframes enter
 {
   0% {opacity: 0;}
@@ -127,6 +136,12 @@ h1
   opacity: 0;
   animation: pixel-load 1.2s forwards;
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
 }
 h1:hover
 {

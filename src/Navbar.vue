@@ -26,7 +26,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <i class="pi pi-align-justify hover:cursor-pointer" :class="[!isActiveNav ? 'text-4xl text-white absolute right-5 top-5 z-50' : 'not-shown']" @click="isActiveNav = !isActiveNav"></i>
+    <i class="pi pi-align-justify hover:cursor-pointer" :class="[!isActiveNav ? 'text-6xl text-white absolute right-5 top-5 z-50' : 'not-shown']" @click="isActiveNav = !isActiveNav"></i>
     
     <Transition name="menu-anim">
         <div v-if="isActiveNav" class="mobile-menu" @click.stop> <RouterLink to="/" class="nav-l" :class="[isActiveLink('/') ? 'text-white' : 'text-gray-400']" @click="closeMenu">
@@ -61,7 +61,7 @@ onUnmounted(() => {
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        width: 1200px;
+        width: 80vw;
         height: 100vh;
         position: absolute;
         right: 0;
@@ -92,7 +92,15 @@ onUnmounted(() => {
         transition: color 0.6s ease;
         border-bottom: 1px solid rgba(255,255,255,0.1); 
     }
-
+    @media (max-width: 768px)
+    {
+        .nav-l
+        {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+        
+    }
     .nav-l::before {
         content: "";
         position: absolute;
@@ -114,5 +122,10 @@ onUnmounted(() => {
         color: white; 
         padding-right: 5rem; 
         transition: all 0.6s ease;
+    }
+    @media (max-width: 768px) {
+        .nav-l:hover {
+            padding-right: 1rem;
+        }
     }
 </style>

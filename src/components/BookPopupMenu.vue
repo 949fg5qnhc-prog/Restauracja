@@ -2,9 +2,11 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useToast } from 'vue-toastification';
+import FloatLabel from 'primevue/floatlabel';
+import InputText from 'primevue/inputtext';
 
 const toast = useToast();
-
+const email = ref('');
 
 const props = defineProps({
   day: {
@@ -43,14 +45,19 @@ const handleConfirm = async () => {
 </script>
 
 <template>
-<div class="bg-gray-600/20 backdrop-blur-3xl backdrop-opacity-40 w-60 h-[300px] rounded-xl border border-gray-900 flex flex-col justify-center items-center p-4">
+<div class="bg-gray-600/20 backdrop-blur-3xl backdrop-opacity-40 w-60 h-[350px] rounded-xl border border-gray-900 flex flex-col justify-center items-center p-4">
     <h2 class="text-white text-center mb-8">Rezerwacja na dzień: <br><strong>{{ day.day }} {{ day.month }}</strong></h2>
-    <select  v-model="selectedHourIndex" class="py-3 bg-gray-900 text-white text-bold text-2xl mb-10 rounded-xl border border-gray-300">
+    <select  v-model="selectedHourIndex" class="py-3 bg-gray-900 text-white text-bold text-2xl mb-5 rounded-xl border border-gray-300">
         <option :value="null" disabled>Wybierz godzinę</option>
         <template v-for="(isAvailable, index) in day.remainingSlots">
             <option v-if="isAvailable" :key="index" :value="index">{{ day.hours[index] }}</option>
         </template>
     </select>
+    <FloatLabel variant="on" class="w-full mb-6">
+        <InputText id="on_label" v-model="email" autocomplete="off" class="w-full" />
+        <label for="on_label" class="text-gray-300">Email</label>
+    </FloatLabel>
+
     <div class="card">
         <button @click="handleConfirm">Potwierdź</button>    
     </div>
@@ -61,6 +68,14 @@ const handleConfirm = async () => {
 </template>
 
 <style scoped>
+input
+{
+    background-color: rgba(56, 56, 56, 0.6);
+    border-radius: 10px;
+    border: 1px solid rgba(188, 188, 188, 0.5);
+    font-size: 1rem;
+}
+
 .card
 {
     width: 130px;

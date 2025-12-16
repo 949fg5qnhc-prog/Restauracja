@@ -8,63 +8,64 @@
         "cos",
         "cos innego"
       ],
-      "animation": "translate-x-104 translate-y-32 scale-200 z-50",
-      "id": "7469"
+      "id": "7469",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAAIwOA8anBO8xKT5X-pPQgCRwQZl_FIWQQ&s"
     },
     {
-      "name": "Pizza",
+      "name": "Pasta",
       "ingredients": "cos",
       "time": 10,
       "allergens": [
         "cos",
         "cos innego"
       ],
-      "animation": "translate-y-32 scale-200 z-50",
-      "id": "2c8a"
+      "id": "2c8a",
+      "url": "https://www.allrecipes.com/thmb/IrY572TXic4UXXVn8EetsarI3S0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-4x3-f404628aad2a435a9985b2cf764209b5.jpg"
+
     },
     {
-      "name": "Pizza",
+      "name": "Steak",
       "ingredients": "cos",
       "time": 10,
       "allergens": [
         "cos",
         "cos innego"
       ],
-      "animation": "-translate-x-104 translate-y-32 scale-200 z-50",
-      "id": "8496"
+      "id": "8496",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNu0x8iJtxY2GhpAg8pts3iOWRcTjzDZQ8OA&s"
     },
     {
-      "name": "Pizza",
+      "name": "Rak",
       "ingredients": "cos",
       "time": 10,
       "allergens": [
         "cos",
         "cos innego"
       ],
-      "animation": "translate-x-104 -translate-y-32 scale-200 z-50",
-      "id": "5ba9"
+      "id": "5ba9",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNbppkgeBNauxX3W7QVYxa-50Qx7Xuxetrw&s"
     },
     {
-      "name": "Pizza",
+      "name": "Omlet",
       "ingredients": "cos",
       "time": 10,
       "allergens": [
         "cos",
         "cos innego"
       ],
-      "animation": "-translate-y-32 scale-200 z-50",
-      "id": "1de7"
+      "id": "1de7",
+      "url": "https://cdn.galleries.smcloud.net/t/galleries/gf-QD1U-H43k-R5VC_jak-zrobic-omlet-klasyczny-przepis-664x0-nocrop.jpg"
     },
     {
-      "name": "Pizza",
+      "name": "Nalesniki",
       "ingredients": "cos",
       "time": 10,
       "allergens": [
         "cos",
         "cos innego"
       ],
-      "animation": "-translate-x-104 -translate-y-32 scale-200 z-50",
-      "id": "ce74"
+      "id": "ce74",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR48Bl0v1oxXJ0dUnctAfbOm0yHU1NUpXFwmA&s"
     }
   ],
   "dates": [
