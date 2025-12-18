@@ -7,6 +7,7 @@ import InputText from 'primevue/inputtext';
 
 const toast = useToast();
 const email = ref('');
+const userData = ref([]);
 
 const props = defineProps({
   day: {
@@ -25,12 +26,23 @@ const handleConfirm = async () => {
         return;
     }
 
+    if (!email.value || !email.value.includes('@')) {
+        toast.error('Proszę podać adres email.');
+        return;
+    }
+
     const newRemainingSlots = [...props.day.remainingSlots];
     newRemainingSlots[selectedHourIndex.value] = false;
 
     try {
         await axios.patch(`http://localhost:5001/dates/${props.day.id}`, {
             remainingSlots: newRemainingSlots
+        });
+        await axios.post('http://localhost:5001/users', {
+            email: email.value,
+            day: props.day.day,
+            month: props.day.month,
+            hour: props.day.hours[selectedHourIndex.value]
         });
 
         toast.success('Rezerwacja została potwierdzona!');
@@ -54,7 +66,7 @@ const handleConfirm = async () => {
         </template>
     </select>
     <FloatLabel variant="on" class="w-full mb-6">
-        <InputText id="on_label" v-model="email" autocomplete="off" class="w-full" />
+        <InputText id="on_label" v-model="email" autocomplete="off" class="w-full" required />
         <label for="on_label" class="text-gray-300">Email</label>
     </FloatLabel>
 

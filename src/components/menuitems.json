@@ -1,4 +1,48 @@
 {
+  "users": [
+    {
+      "id": "8471",
+      "email": "",
+      "day": 28,
+      "month": "December",
+      "hour": "17:30"
+    },
+    {
+      "id": "e3b3",
+      "email": "",
+      "day": 30,
+      "month": "December",
+      "hour": "17:30"
+    },
+    {
+      "id": "0772",
+      "email": "test@test.com",
+      "day": 21,
+      "month": "December",
+      "hour": "17:30"
+    },
+    {
+      "id": "8234",
+      "email": "asd",
+      "day": 29,
+      "month": "December",
+      "hour": "17:30"
+    },
+    {
+      "id": "6b26",
+      "email": "asd",
+      "day": 3,
+      "month": "January",
+      "hour": "17:30"
+    },
+    {
+      "id": "91f3",
+      "email": "asd@nnn.com",
+      "day": 27,
+      "month": "December",
+      "hour": "17:30"
+    }
+  ],
   "menuitems": [
     {
       "name": "Pizza",
@@ -21,7 +65,6 @@
       ],
       "id": "2c8a",
       "url": "https://www.allrecipes.com/thmb/IrY572TXic4UXXVn8EetsarI3S0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-4x3-f404628aad2a435a9985b2cf764209b5.jpg"
-
     },
     {
       "name": "Steak",
@@ -43,7 +86,7 @@
         "cos innego"
       ],
       "id": "5ba9",
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNbppkgeBNauxX3W7QVYxa-50Qx7Xuxetrw&s"
+      "url": "https://www.simplyrecipes.com/thmb/wB6YpmOqQ3Q2jeZ_CP_kZ6FmfLA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-How-to-Boil-and-Eat-Lobster-LEAD-4-67423237ced04af3ad652c7e0ec9ecab.JPG"
     },
     {
       "name": "Omlet",
@@ -65,7 +108,7 @@
         "cos innego"
       ],
       "id": "ce74",
-      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR48Bl0v1oxXJ0dUnctAfbOm0yHU1NUpXFwmA&s"
+      "url": "https://pl.vihaad.com/wp-content/uploads/2024/09/Nalesniki-z-twarogiem-i-truskawkami.webp"
     }
   ],
   "dates": [
@@ -482,7 +525,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 21,
@@ -584,7 +627,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 27,
@@ -601,7 +644,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 28,
@@ -618,7 +661,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 29,
@@ -635,7 +678,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 30,
@@ -703,7 +746,7 @@
       "fullSlots": false,
       "remainingSlots": [
         true,
-        true,
+        false,
         true
       ],
       "day": 3,

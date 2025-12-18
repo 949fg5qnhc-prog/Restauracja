@@ -69,11 +69,11 @@ onMounted(() => {
   <img src="/public/pexels-efrem-efre-2786187-16124818.jpg" class="blur-sm fixed inset-0 w-full h-full object-cover -z-10" />
   <h1 :class="[isMenuVisible ? 'nn' : '']">Wybierz datę rezerwacji z kalendarza ponizej</h1>
   <div class="cont p-6 flex justify-center bg-gray-700/40 backdrop-opacity-10 backdrop-blur-2xl w-full max-w-2xl mx-auto mt-2 rounded-3xl border-0">
-    <div class="dl grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 gap-4 auto-rows-[100px] w-full rounded-3xl">
+    <div class="dl flex flex-wrap justify-center gap-4 w-full rounded-3xl">
       <div v-for="day in dates"
            :key="day.id"
            @click="!isFullyBooked(day) && showMenu(day)"
-           class="border rounded-lg p-4 text-center w-full day"
+           class="cell border rounded-lg p-4 text-center w-full sm:w-[calc((100%_-_3rem)/4)] md:w-[calc((100%_-_6rem)/7)] h-[100px] day"
            :class="{
              'bg-gray-300/65 backdrop-blur-lg backdrop-opacity-30 cursor-pointer hover:scale-[1.1]': !isFullyBooked(day),
              'bg-gray-500/50 cursor-not-allowed': isFullyBooked(day)
@@ -114,9 +114,14 @@ onMounted(() => {
 @media (max-width: 768px) {
   .cont{
     width: 65vw;
+    align-items: center;
+    justify-content: center;
   }
   h1{
     margin-top: 3rem;
+  }
+  .cell{
+    width: 50%;
   }
 }
 
